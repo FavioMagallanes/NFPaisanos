@@ -1,8 +1,19 @@
+import { Auction } from '@/components/Auction';
+import { Hero } from '@/components/Hero';
+import { Navbar } from '@/components/Navbar';
+
 export default function Home(): JSX.Element {
   return (
     <>
-      <h1 className="font-dm text-3xl font-bold">Hello world!</h1>
-      <h1 className="font-poppins text-3xl font-bold">Hello world!</h1>
+      <div className="pb-4 lg:border lg:border-b-graysecondary">
+        <Navbar />
+      </div>
+      <div className="mt-16">
+        <Hero />
+      </div>
+      <div>
+        <Auction />
+      </div>
     </>
   );
 }
