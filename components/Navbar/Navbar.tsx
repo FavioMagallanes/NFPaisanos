@@ -41,7 +41,7 @@ const Navbar = (): JSX.Element => {
           </div>
         </div>
         <div className="hidden items-center justify-self-end lg:col-span-6 lg:block">
-          <Button>
+          <Button className='"text-center" rounded-full border border-graysecondary py-2 px-3'>
             <p className="font-dm text-sm font-bold text-graysecondary">
               Connect Wallet
             </p>

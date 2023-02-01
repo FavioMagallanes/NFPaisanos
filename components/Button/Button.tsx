@@ -5,12 +5,10 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({ children }: ButtonProps): JSX.Element => {
+const Button = ({ children, className }: ButtonProps): JSX.Element => {
   return (
     <div>
-      <button className="rounded-full border border-graysecondary py-2 px-3 text-center">
-        {children}
-      </button>
+      <button className={className}>{children}</button>
     </div>
   );
 };

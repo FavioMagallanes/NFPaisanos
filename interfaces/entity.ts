@@ -1,4 +1,4 @@
-export interface Intity {
+export interface Entity {
   id: number;
   instantPrice: string;
   highestBid: string;
