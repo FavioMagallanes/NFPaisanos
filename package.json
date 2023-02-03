@@ -22,6 +22,7 @@
     "react-range": "^1.8.14"
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.0",
     "@next/eslint-plugin-next": "^13.1.6",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@typescript-eslint/eslint-plugin": "^5.49.0",

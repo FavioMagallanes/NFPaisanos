@@ -1,12 +1,15 @@
 import { type Props } from '@/pages';
 import { dateFormated } from '@/utils/formatedDate';
 
-const CurrentbidCard = ({ ethData, popularData }: Props) => {
-  const { hours, minutes, seconds } = dateFormated(popularData[0].endsAt);
-  const { eth, usd } = ethData;
+const CurrentbidCard = ({
+  ethPriceData,
+  endsAt,
+}: Omit<Props, 'filterData'>) => {
+  const { hours, minutes, seconds } = dateFormated(endsAt);
+  const { eth, usd } = ethPriceData;
 
   return (
-    <section className="mt-12 flex h-[296px] flex-col items-center justify-center rounded-2xl bg-gray py-8 lg:w-3/4">
+    <section className="mt-12 flex h-[296px] flex-col items-center justify-center rounded-2xl bg-graythird py-8 lg:w-3/4">
       <div>
         <p className="text-center font-poppins text-base font-medium text-white ">
           Current Bid

@@ -4,7 +4,7 @@ import { type Props } from '@/pages';
 const apiKey = process.env.API_KEY as string;
 const baseURL = process.env.BASE_URL as string;
 
-export const getPopularData = async (): Promise<Props> => {
+export const getAuctionData = async (): Promise<Props> => {
   const res = await axios.get(`${baseURL}/popular`, {
     headers: {
       'Content-Type': 'application/json',
@@ -15,8 +15,19 @@ export const getPopularData = async (): Promise<Props> => {
   return res.data;
 };
 
-export const getEthData = async (): Promise<Props> => {
+export const getEthPriceData = async (): Promise<Props> => {
   const res = await axios.get(`${baseURL}/eth-price`, {
+    headers: {
+      'Content-Type': 'application/json',
+      apiKey,
+    },
+  });
+
+  return res.data;
+};
+
+export const getFilterData = async (): Promise<Props> => {
+  const res = await axios.get(`${baseURL}/aunctions`, {
     headers: {
       'Content-Type': 'application/json',
       apiKey,

@@ -33,11 +33,13 @@ module.exports = {
       whitethird: '#F4F5F6',
       gray: ' #353945',
       graysecondary: '#777E91',
+      graythird: '#23262F',
       blue: '#3772FF',
       bluedark: '#00337C',
       green: '#45B36B',
       pink: '#EF466F',
       purple: '#9757D7',
+      orange: '#FFA500',
     },
     extend: {
       fontFamily: {

@@ -2,13 +2,19 @@ interface ButtonProps {
   children?: React.ReactNode;
   text?: string;
   className?: string;
-  onClick?: () => void;
+  callback?: () => void;
 }
 
-const Button = ({ children, className }: ButtonProps): JSX.Element => {
+const Button = ({
+  children,
+  className,
+  callback,
+}: ButtonProps): JSX.Element => {
   return (
     <div>
-      <button className={className}>{children}</button>
+      <button onClick={callback} className={className}>
+        {children}
+      </button>
     </div>
   );
 };
