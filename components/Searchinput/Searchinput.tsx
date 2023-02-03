@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 const SearchInput = () => {
   return (
-    <div className="mt-46 container mx-auto w-3/4 grid-cols-1 justify-center md:grid-cols-12 xl:px-40 xl:pr-64 2xl:px-32 2xl:pr-56">
+    <div className="mt-46 container mx-auto w-3/4 grid-cols-1 justify-center md:grid-cols-12 xl:px-40 xl:pr-64 2xl:px-24 2xl:pr-60">
       <div className="relative">
         <input
           type="text"

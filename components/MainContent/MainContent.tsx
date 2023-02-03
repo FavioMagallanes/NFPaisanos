@@ -54,9 +54,9 @@ const MainContent = ({
             <div className="flex items-center gap-2">
               <div
                 className={
-                  color !== 'black'
-                    ? `bg-${color} rounded-full px-2 py-2`
-                    : `bg-${color} rounded-full border border-white px-2 py-2`
+                  color === 'black'
+                    ? `bg-${color} rounded-full border border-white px-2 py-2`
+                    : `rounded-full bg-${color} px-2 py-2`
                 }
               >
                 <Icon
