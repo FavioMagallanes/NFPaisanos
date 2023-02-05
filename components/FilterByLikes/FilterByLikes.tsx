@@ -1,23 +1,16 @@
 import { Icon } from '@iconify/react';
 
-// interface SelectProps {
-//   options: Array<{ value: string; label: string }>;
-//   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-//   name?: string;
-//   value?: string;
-// }
-
-const Select = () => {
+const FilterByLikes = () => {
   return (
     <>
       <select className="focus:shadow-outline w-full cursor-pointer appearance-none rounded-lg border-2 border-gray bg-black py-3.5 px-5 pr-8 font-poppins text-sm font-medium leading-tight text-white focus:outline-none">
         <option value="" disabled selected hidden>
-          Newest
+          Most Liked
         </option>
-        <option>Newest</option>
-        <option>Oldest</option>
+        <option>Most Liked</option>
+        <option>Least Liked</option>
       </select>
-      <div className="absolute inset-y-0 right-0 mr-5 mt-2 flex h-8 cursor-pointer items-center rounded-full border-2 border-gray px-2.5 text-gray">
+      <div className="absolute inset-y-8 right-0 mr-5 mt-2 flex h-8 cursor-pointer items-center rounded-full border-2 border-gray px-2.5 text-gray">
         <Icon
           icon="material-symbols:arrow-forward-ios-rounded"
           color="#777e91"
@@ -30,4 +23,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default FilterByLikes;
