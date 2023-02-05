@@ -2,8 +2,12 @@ import { FilterByRange } from '../FilterByRange';
 import { Select } from '../Select';
 import { FilterByLikes } from '../FilterByLikes';
 import { Filterbycolor } from '../Filterbycolor';
+import useSortByLikes from '@/hooks/useSortByLikes';
+import mockup from '../../mockup.json';
 
 const Filterdashboard = () => {
+  const { data, handleOptionChange, selectedOption } = useSortByLikes(mockup);
+
   return (
     <div className="container mx-auto mt-32 grid w-3/4 grid-cols-1 md:grid-cols-12 xl:px-40 xl:pr-64 2xl:px-24 2xl:pr-60">
       <div className=" relative col-span-1 mb-6 md:col-span-6 md:justify-start xl:w-72">
@@ -34,7 +38,7 @@ const Filterdashboard = () => {
               <p className="mb-4 ml-1 font-poppins text-xs font-bold uppercase text-whitethird">
                 Likes
               </p>
-              <FilterByLikes />
+              <FilterByLikes handleOptionChange={handleOptionChange} />
             </div>
             <div className="relative">
               <p className="mb-4 ml-1 mt-4 font-poppins text-xs font-bold uppercase text-whitethird">
@@ -43,6 +47,17 @@ const Filterdashboard = () => {
               <Filterbycolor />
             </div>
           </div>
+        </div>
+        <div className="col-span-12 md:col-span-6">
+          {selectedOption !== null && (
+            <div>
+              {data.map((d, i) => (
+                <p className="text-white" key={i}>
+                  {d.likes}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
