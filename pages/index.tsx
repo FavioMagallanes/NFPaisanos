@@ -8,6 +8,7 @@ import { SearchInput } from '@/components/SearchInput';
 import { FiltersContent } from '@/components/FiltersContent';
 import { getInitialData } from '../services/services';
 import { motion } from 'framer-motion';
+import { Footer } from '@/components/Footer';
 
 export interface Props {
   auctionData: Entity[];
@@ -36,6 +37,7 @@ export default function Home({
         <MainContent auctionData={auctionData} ethPriceData={ethPriceData} />
         <SearchInput />
         <FiltersContent initialData={initialData} />
+        <Footer />
       </div>
     </motion.div>
   );
