@@ -6,6 +6,12 @@ body {
   @apply bg-black;
 }
 
+@layer components {
+  .select {
+    @apply w-full cursor-pointer appearance-none rounded-lg border-2 border-gray bg-black py-3.5 px-5 pr-8 font-poppins text-sm font-medium leading-tight text-white;
+  }
+}
+
 .range {
   width: 100%;
   height: 14px;
@@ -30,7 +36,3 @@ body {
   left: -12px;
   top: -12px;
 }
-/* 
-.hover-null {
-  border: 2px solid transparent;
-} */

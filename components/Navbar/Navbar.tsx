@@ -2,20 +2,30 @@ import Link from 'next/link';
 import { Button } from '../Button';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Navbar = (): JSX.Element => {
   return (
-    <div className="pb-4 lg:border lg:border-b-graysecondary">
-      <header className="container mx-auto items-center px-8 pt-12 sm:pt-3">
+    <div className=" pb-4 lg:border lg:border-b-graysecondary">
+      <header className="container mx-auto  max-w-[1440px] items-center px-8 pt-12 sm:pt-3">
         <nav className="grid grid-cols-2  items-center  gap-4 py-3 lg:grid-cols-12">
           <div className="col-span-1 flex items-center gap-4 lg:col-span-6">
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <Image src="/logo.svg" width={24} height={24} alt="Logo" />
-            </div>
+            </motion.div>
             <div>
-              <h1 className="font-poppins text-2xl font-semibold text-whitethird sm:text-xl md:text-2xl">
+              <motion.h1
+                className=" font-poppins text-2xl font-semibold text-whitethird sm:text-xl md:text-2xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
                 NFPaisanos
-              </h1>
+              </motion.h1>
             </div>
             <div className="mx-8 hidden h-10 border border-l-0 border-graysecondary lg:block"></div>
             <div>
@@ -39,7 +49,7 @@ const Navbar = (): JSX.Element => {
               </ul>
             </div>
           </div>
-          <div className="hidden items-center justify-self-end lg:col-span-6 lg:block">
+          <div className="mr-20 hidden items-center justify-self-end lg:col-span-6 lg:block">
             <Button className='"text-center" rounded-full border border-graysecondary py-2 px-3'>
               <p className="font-dm text-sm font-bold text-graysecondary">
                 Connect Wallet

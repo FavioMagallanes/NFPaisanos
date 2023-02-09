@@ -13,7 +13,7 @@ const Filterbycolor = () => {
         onClick={() => {
           setIsVisible(!isVisible);
         }}
-        className="focus:shadow-outline  w-full cursor-pointer appearance-none  rounded-lg border-2 border-gray bg-black py-3.5 px-5 pr-8 font-poppins text-sm font-medium leading-tight text-white placeholder:font-poppins placeholder:text-sm placeholder:font-medium placeholder:text-white focus:outline-none"
+        className="select placeholder:text-white focus:shadow-none focus:outline-none"
       ></input>
       {isVisible && (
         <div className="mt-3 flex  flex-col gap-y-6 rounded-xl border-2 border-gray bg-graythird p-4 shadow-lg">
@@ -24,7 +24,7 @@ const Filterbycolor = () => {
             </p>
           </div>
           <div className="flex gap-3 p-2 text-white hover:cursor-pointer hover:rounded-lg hover:bg-black">
-            <span className="h-5 w-5 rounded-full bg-black"></span>
+            <span className="r h-5 w-5 rounded-full border-2 border-white bg-black"></span>
             <p className="font-poppins text-sm font-normal text-white">Black</p>
           </div>
           <div className="flex gap-3 p-2 text-white hover:cursor-pointer hover:rounded-lg hover:bg-black">

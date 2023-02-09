@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 interface ButtonProps {
   children?: React.ReactNode;
   text?: string;
@@ -12,9 +14,14 @@ const Button = ({
 }: ButtonProps): JSX.Element => {
   return (
     <div>
-      <button onClick={callback} className={className}>
+      <motion.button
+        onClick={callback}
+        className={className}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
         {children}
-      </button>
+      </motion.button>
     </div>
   );
 };

@@ -1,9 +1,12 @@
-import { Filterdashboard } from '../Filterdashboard';
+import { type Props } from '@/pages';
+import { FilterDashboard } from '../FilterDashboard';
 
-const Filterscontent = () => {
+const Filterscontent = ({
+  initialData,
+}: Omit<Props, 'ethPriceData' | 'auctionData' | 'endsAt'>) => {
   return (
     <>
-      <Filterdashboard />
+      <FilterDashboard initialData={initialData} />
     </>
   );
 };

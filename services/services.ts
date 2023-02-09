@@ -26,13 +26,17 @@ export const getEthPriceData = async (): Promise<Props> => {
   return res.data;
 };
 
-export const getFilterData = async (): Promise<Props> => {
-  const res = await axios.get(`${baseURL}/aunctions`, {
-    headers: {
-      'Content-Type': 'application/json',
-      apiKey,
-    },
-  });
-
-  return res.data;
+export const getInitialData = async (): Promise<Props[]> => {
+  try {
+    const res = await axios.get(`${baseURL}/aunctions`, {
+      headers: {
+        'Content-Type': 'application/json',
+        apiKey,
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };

@@ -1,1 +1,1 @@
-export { default as Filterscontent } from './Filterscontent';
+export { default as FiltersContent } from './FiltersContent';

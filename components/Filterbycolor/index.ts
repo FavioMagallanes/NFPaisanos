@@ -1,1 +1,1 @@
-export { default as Filterbycolor } from './Filterbycolor';
+export { default as FilterByColor } from './FilterByColor';

@@ -4,7 +4,7 @@ import { dateFormated } from '@/utils/formatedDate';
 const CurrentbidCard = ({
   ethPriceData,
   endsAt,
-}: Omit<Props, 'filterData'>) => {
+}: Omit<Props, 'initialData'>) => {
   const { hours, minutes, seconds } = dateFormated(endsAt);
   const { eth, usd } = ethPriceData;
 

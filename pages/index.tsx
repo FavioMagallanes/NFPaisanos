@@ -4,9 +4,10 @@ import { Hero } from '@/components/Hero';
 import { Navbar } from '@/components/Navbar';
 import { type Entity } from '@/interfaces/entity';
 import { getEthPriceData, getAuctionData } from '@/services/services';
-import { Searchinput } from '@/components/Searchinput';
-import { Filterscontent } from '@/components/Filterscontent';
-// import { getFilterData } from '../services/services';
+import { SearchInput } from '@/components/SearchInput';
+import { FiltersContent } from '@/components/FiltersContent';
+import { getInitialData } from '../services/services';
+import { motion } from 'framer-motion';
 
 export interface Props {
   auctionData: Entity[];
@@ -15,34 +16,41 @@ export interface Props {
     usd: number;
   };
   endsAt: Date;
-  // filterData: Entity[];
+  initialData: Entity[];
 }
 
 export default function Home({
   auctionData,
   ethPriceData,
+  initialData,
 }: Props): JSX.Element {
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+    >
       <Navbar />
-      <Hero />
-      <MainContent auctionData={auctionData} ethPriceData={ethPriceData} />
-      <Searchinput />
-      <Filterscontent />
-    </>
+      <div className="max-w-1xl mx-auto px-6">
+        <Hero />
+        <MainContent auctionData={auctionData} ethPriceData={ethPriceData} />
+        <SearchInput />
+        <FiltersContent initialData={initialData} />
+      </div>
+    </motion.div>
   );
 }
 
 export const getServerSideProps = async () => {
   const auctionData = await getAuctionData();
   const ethPriceData = await getEthPriceData();
-  // const filterData = await getFilterData();
+  const initialData = await getInitialData();
 
   return {
     props: {
       auctionData,
       ethPriceData,
-      // filterData,
+      initialData,
     },
   };
 };

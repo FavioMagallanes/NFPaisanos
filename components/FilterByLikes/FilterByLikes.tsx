@@ -6,9 +6,9 @@ interface FilterByLikesProps {
 
 const FilterByLikes = ({ handleOptionChange }: FilterByLikesProps) => {
   return (
-    <>
+    <div>
       <select
-        className="focus:shadow-outline w-full cursor-pointer appearance-none rounded-lg border-2 border-gray bg-black py-3.5 px-5 pr-8 font-poppins text-sm font-medium leading-tight text-white focus:outline-none"
+        className="select focus:shadow-none focus:outline-none"
         onChange={handleOptionChange}
         defaultValue=""
       >
@@ -17,7 +17,6 @@ const FilterByLikes = ({ handleOptionChange }: FilterByLikesProps) => {
         </option>
         <option value="most">Most Liked</option>
         <option value="least">Least Liked</option>
-        <option value="reset">Reset</option>
       </select>
       <div className="absolute inset-y-8 right-0 mr-5 mt-2 flex h-8 cursor-pointer items-center rounded-full border-2 border-gray px-2.5 text-gray">
         <Icon
@@ -28,7 +27,7 @@ const FilterByLikes = ({ handleOptionChange }: FilterByLikesProps) => {
           rotate={1}
         />
       </div>
-    </>
+    </div>
   );
 };
 

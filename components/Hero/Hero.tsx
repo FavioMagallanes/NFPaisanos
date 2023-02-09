@@ -9,7 +9,7 @@ const Hero = (): JSX.Element => {
         </p>
       </div>
       <div className="mt-2 mb-6">
-        <h2 className="text-center font-dm text-[38px] font-bold leading-8 text-white lg:text-[40px] lg:leading-[48px]">
+        <h2 className="text-center font-dm text-[30px] font-bold leading-8 text-white md:text-[38px] lg:text-[40px] lg:leading-[48px]">
           The new creative <br className="xl:hidden" /> economy.
         </h2>
       </div>

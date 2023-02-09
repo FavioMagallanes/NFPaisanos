@@ -1,1 +1,1 @@
-export { default as Filterdashboard } from './Filterdashboard';
+export { default as FilterDashboard } from './FilterDashboard';
