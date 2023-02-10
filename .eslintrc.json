@@ -10,8 +10,8 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
-    "prettier/react",
-    "prettier"
+    "prettier",
+    "prettier/@typescript-eslint"
   ],
   "overrides": [],
   "parserOptions": {
