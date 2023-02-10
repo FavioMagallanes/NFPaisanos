@@ -34,29 +34,29 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-floating-promises": "off",
     "import/no-unresolved": "error",
-    "import/no-duplicates": "error"
-  },
-  "import/order": [
-    "warn",
-    {
-      "groups": [
-        "type",
-        "builtin",
-        "object",
-        "external",
-        "internal",
-        "parent",
-        "sibling",
-        "index"
-      ],
-      "pathGroups": [
-        {
-          "pattern": "~/**",
-          "group": "external",
-          "position": "after"
-        }
-      ],
-      "newlines-between": "always"
-    }
-  ]
+    "import/no-duplicates": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "type",
+          "builtin",
+          "object",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always"
+      }
+    ]
+  }
 }
